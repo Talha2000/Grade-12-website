@@ -1,0 +1,91 @@
+
+<html>
+<head>
+<title>Languages</title>
+<link rel="stylesheet" href="mystyle4.css">
+<SCRIPT language="javascript"><!--
+
+defaultcolor= window.document.bgColor;
+
+function BgcolorSetter(mycolor)
+{
+	window.document.bgColor = mycolor;
+}
+
+function GoBrady()
+{
+	brady= window.document.form02.bradykids.selectedIndex
+	window.location.href= window.document.form02.bradykids[brady].value;
+}
+
+function Color(chosencolor)
+{
+	window.document.bgColor = chosencolor;
+}
+
+
+function mySquareRoot()
+{
+	number = prompt("Give me a number", "");
+	mynumber1 = Math.sqrt(number);
+	
+	mynumber2 = Math.round(mynumber1);
+	alert("The square root of " + number + " is " + mynumber1 + " which rounds to about " + mynumber2);
+}
+
+//--></SCRIPT>
+</head>
+
+
+<BODY BGCOLOR="#99ffdd">
+<ul class="nav">
+	<li><a href="HomePage.html">HomePage</a></li>
+	<li><a href="World.html">World of Programming</a></li>
+	<li><a href="Importance.html">Importance of Learning</a></li>
+	<li><a href="Language.html">Try Javascript</a></li>
+	<li><a href="About.html">About</a></li>
+	<li><a href="Feed.html">Feedback</a></li>
+</ul>
+
+<div id="mytext">
+<h1><u><center><strong>Try Out Some Javascript</strong></center></h1></u>
+<p>
+<P align=center>
+<A HREF="" onMouseOver="BgcolorSetter('#0000CC')" onMouseOut="BgcolorSetter(defaultcolor)"><IMG SRC="swatch_0000cc.gif" WIDTH="43" HEIGHT="21" BORDER="0" ALT="0000CC" HSPACE=10></A>
+<A HREF="" onMouseOver="BgcolorSetter('#009900')" onMouseOut="BgcolorSetter(defaultcolor)"><IMG SRC="swatch_009900.gif" WIDTH="43" HEIGHT="21" BORDER="0" ALT="009900" HSPACE=10></A>
+<A HREF="" onMouseOver="BgcolorSetter('#339999')" onMouseOut="BgcolorSetter(defaultcolor)"><IMG SRC="swatch_339999.gif" WIDTH="43" HEIGHT="21" BORDER="0" ALT="339999" HSPACE=10></A>
+<A HREF="" onMouseOver="BgcolorSetter('#CC0033')" onMouseOut="BgcolorSetter(defaultcolor)"><IMG SRC="swatch_cc0033.gif" WIDTH="43" HEIGHT="21" BORDER="0" ALT="CC0033" HSPACE=10></A>
+</p>
+</center>
+<p> Click on this drop down<br>
+to permanently change the background<br>
+colors based on the different names </p>
+<form name="form02">
+<select name="bradykids" onchange="GoBrady()">
+<option value="brady_greg.html">Greg
+</option>
+<option value="brady_peter.html">Peter
+</option>
+<option value="brady_marsha.html">Marsha
+</option>
+
+<option value="brady_jan.html">Jan
+</option>
+<option value="brady_cindy.html">Cindy
+</option>
+</select>
+</form>
+
+<p class="para"> You may choose to click on these different colors aswell</p>
+<form>
+<form name="myform">
+<input type="radio" name="mycolor" onclick="Color('FF0000')">Red</br>
+<input type="radio" name="mycolor" onclick="Color('FF9999')">Pink</br>
+<input type="radio" name="mycolor" onclick="Color('009900')">Green</br>
+<input type="radio" name="mycolor" onclick="Color('CC0066')">Purple</br>
+</form>
+<p class="para"> Try this Square root calculator </p>
+<a href="javascript:mySquareRoot()">Click here</a>
+</body>
+
+</html>
